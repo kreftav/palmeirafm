@@ -250,18 +250,17 @@
   .schedule{background:var(--green-deep-2); color:#fff; position:relative; overflow:hidden;}
   .schedule .section-head h2, .schedule .section-head .tag{color:#fff;}
   .schedule .section-head p{color:#CFE4D2;}
-  .schedule-grid{display:grid; grid-template-columns:repeat(3, 1fr); gap:22px;}
+  .schedule-grid{display:grid; grid-template-columns:repeat(3, 1fr); gap:20px;}
   .slot{
     background:rgba(255,255,255,0.06);
     border:1px solid rgba(255,255,255,0.14);
     border-radius:var(--radius-md);
-    padding:26px 24px;
+    padding:20px 22px;
   }
   .slot .time{
-    font-family:'Space Mono',monospace; color:var(--gold); font-size:.85rem; letter-spacing:.05em;
+    font-family:'Space Mono',monospace; color:var(--gold); font-size:.85rem; letter-spacing:.05em; font-weight:700;
   }
-  .slot h3{color:#fff; font-size:1.3rem; margin:10px 0 8px;}
-  .slot p{color:#CFE4D2; font-size:.95rem; margin:0;}
+  .slot h3{color:#fff; font-size:1.2rem; margin:8px 0 0;}
   .schedule-note{margin-top:26px; font-size:.88rem; color:#AFCBB3;}
 
   /* ---------- sobre ---------- */
@@ -472,23 +471,52 @@
       <div class="section-head">
         <span class="tag">Grade diária</span>
         <h2>Companhia do amanhecer ao fim do dia</h2>
-        <p>Três faixas horárias, um jeito só: perto da comunidade. Fale com a gente pelo WhatsApp para sugerir músicas ou avisos.</p>
+        <p>Acompanhe nossa programação completa feita para toda a comunidade de Palma Sola e região.</p>
       </div>
       <div class="schedule-grid">
         <div class="slot">
-          <span class="time">06H — 12H</span>
-          <h3>Manhã na Roça</h3>
-          <p>Notícias locais, previsão do tempo para a lavoura e as músicas que animam o café da manhã da família catarinense.</p>
+          <span class="time">06H — 08H</span>
+          <h3>Bom Dia Campo e Cidade</h3>
         </div>
         <div class="slot">
-          <span class="time">12H — 18H</span>
-          <h3>Tarde da Comunidade</h3>
-          <p>Recados, aniversários, avisos da igreja e do comércio local, intercalados com o melhor do sertanejo e da música gaúcha.</p>
+          <span class="time">08H — 10H</span>
+          <h3>Show da Manhã</h3>
         </div>
         <div class="slot">
-          <span class="time">18H — 00H</span>
-          <h3>Noite Palmeira</h3>
-          <p>Programação musical variada para relaxar depois do dia de trabalho, com pedidos dos ouvintes ao vivo pelo WhatsApp.</p>
+          <span class="time">10H — 11H</span>
+          <h3>Experiência de Deus</h3>
+        </div>
+        <div class="slot">
+          <span class="time">11H — 12H</span>
+          <h3>Manhã Sertaneja</h3>
+        </div>
+        <div class="slot">
+          <span class="time">12H — 13H</span>
+          <h3>Jornal das 12h</h3>
+        </div>
+        <div class="slot">
+          <span class="time">13H — 15H</span>
+          <h3>Bandas em Festa</h3>
+        </div>
+        <div class="slot">
+          <span class="time">15H — 17H</span>
+          <h3>A Tarde é Nossa</h3>
+        </div>
+        <div class="slot">
+          <span class="time">17H — 19H</span>
+          <h3>Entardecer na Querência</h3>
+        </div>
+        <div class="slot">
+          <span class="time">19H — 21H</span>
+          <h3>Programação de Terceiros</h3>
+        </div>
+        <div class="slot">
+          <span class="time">21H — 22H</span>
+          <h3>A Voz do Brasil</h3>
+        </div>
+        <div class="slot">
+          <span class="time">22H — 06H</span>
+          <h3>Programação Musical</h3>
         </div>
       </div>
       <p class="schedule-note">* Programação sujeita a alterações. Fale com a gente para sugestões ou para anunciar sua empresa.</p>
@@ -627,7 +655,7 @@
   function toggleAudio() {
     if (audio.paused) {
       playerStatus.textContent = 'Conectando...';
-      audio.load(); // Garante o ponto mais recente do stream
+      audio.load();
       audio.play().then(() => {
         dialCard.classList.add('is-playing');
         playBtnLabel.textContent = 'Pausar';
